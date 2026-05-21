@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niaz Morshed Khan | Senior Growth Strategist & Media Buyer</title>
+    
+    <!-- Google Fonts: Hind Siliguri & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f5ff',
+                            100: '#e1ecff',
+                            500: '#3a86ff', // Cyber Blue
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#0b1329',
+                            950: '#030712'  // True Midnight Dark Base
+                        },
+                        neon: {
+                            cyan: '#00f0ff',
+                            pink: '#ff007f',
+                            purple: '#8a2be2',
+                            green: '#39ff14'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Hind Siliguri"', '"Inter"', 'sans-serif'],
+                        inter: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for Advanced Cyberpunk/Glassmorphic Aesthetics -->
+    <style>
+        body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        /* Premium Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3a86ff, #8a2be2);
+            border-radius: 99px;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(11, 19, 41, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            color: #1e293b;
+        }
+
+        /* Glowing Border Animation */
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(90deg, #3a86ff, #00f0ff, #ff007f, #3a86ff);
+            background-size: 300% 300%;
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            animation: move-gradient 4s linear infinite;
+        }
+        .glow-border:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes move-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Smooth scroll-to-bottom hover effect on images */
+        .hover-scroll-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .hover-scroll-img {
+            transition: transform 7s cubic-bezier(0.1, 1, 0.2, 1);
+            transform: translateY(0);
+            width: 100%;
+        }
+        .hover-scroll-container:hover .hover-scroll-img {
+            transform: translateY(calc(-100% + 240px));
+        }
+
+        /* Rotating Background Orbs */
+        .blur-orb {
+            filter: blur(140px);
+            opacity: 0.2;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            transition: all 1s ease-in-out;
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
+            50% { transform: translateY(-30px) scale(1.1) rotate(180deg); }
+        }
+
+        .animate-float-slow {
+            animation: float-slow 10s ease-in-out infinite;
+        }
+
+        /* Custom Range Slider Styling */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.1);
+            height: 6px;
+            border-radius: 99px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #3a86ff;
+            cursor: pointer;
+            box-shadow: 0 0 10px #3a86ff;
+            transition: background 0.15s ease-in-out;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #00f0ff;
+            box-shadow: 0 0 15px #00f0ff;
+        }
+    </style>
+</head>
+<body class="transition-colors duration-500 selection:bg-brand-500 selection:text-white">
+
+    <!-- Matrix Glowing Background Orbs -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <div class="blur-orb absolute w-[500px] h-[500px] bg-brand-500 rounded-full top-[-10%] left-[-10%] animate-float-slow"></div>
+        <div class="blur-orb absolute w-[600px] h-[600px] bg-neon-purple rounded-full bottom-[-10%] right-[-10%] animate-float-slow" style="animation-delay: -5s;"></div>
+        <div class="blur-orb absolute w-96 h-96 bg-neon-cyan rounded-full top-[35%] right-[15%] opacity-15"></div>
+    </div>
+
+    <!-- Preloader Screen -->
+    <div id="preloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#030712] transition-all duration-700">
+        <div class="relative w-28 h-28 mb-6">
+            <div class="absolute inset-0 border-4 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
+            <div class="absolute inset-2 border-4 border-neon-pink border-b-transparent rounded-full animate-spin" style="animation-direction: reverse; animation-duration: 1.5s;"></div>
+            <div class="absolute inset-4 border-2 border-neon-cyan border-l-transparent rounded-full animate-pulse"></div>
+            <img id="preload-logo" src="" alt="NMK" class="absolute inset-0 m-auto w-12 h-12 rounded-full object-contain">
+        </div>
+        <h2 class="text-2xl font-extrabold tracking-wider text-white font-inter" id="preload-title">NMK Digital</h2>
+        <p class="text-xs text-gray-400 mt-2 font-mono" id="preload-subtitle">Loading Conversion System V2.0...</p>
+    </div>
+
+    <!-- Active Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 rounded-2xl glass-panel transition-all duration-300" id="navbar">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <img id="nav-logo" src="" alt="Logo" class="w-10 h-10 rounded-xl object-cover border border-white/20 transition-transform group-hover:scale-105">
+                <div class="flex flex-col">
+                    <span class="font-black text-lg tracking-wider bg-gradient-to-r from-white via-brand-500 to-neon-cyan bg-clip-text text-transparent" id="nav-brand-name">NMK Digital</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300">
+                <a href="#home" class="hover:text-brand-500 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-500 hover:after:w-full after:transition-all">Home</a>
+                <a href="#services" class="hover:text-brand-500 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-500 hover:after:w-full after:transition-all">Services</a>
+                <a href="#portfolios" class="hover:text-brand-500 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-500 hover:after:w-full after:transition-all">Portfolios</a>
+                <a href="#campaigns" class="hover:text-brand-500 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-500 hover:after:w-full after:transition-all">Case Studies</a>
+                <a href="#about" class="hover:text-brand-500 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-500 hover:after:w-full after:transition-all">About</a>
+                <a href="#contact" class="hover:text-brand-500 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-500 hover:after:w-full after:transition-all">Contact</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="hidden sm:flex items-center gap-4">
+                <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 transition-colors" title="Toggle System Theme">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-neon-purple hover:shadow-[0_0_20px_rgba(58,134,255,0.4)] text-white text-sm font-bold transition-all hover:-translate-y-0.5">Let's Talk</a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <div class="flex items-center gap-2 md:hidden">
+                <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 transition-colors">
+                    <i id="theme-icon-mobile" class="fa-solid fa-moon"></i>
+                </button>
+                <button onclick="toggleMobileMenu()" class="text-white focus:outline-none w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10">
+                    <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-drawer" class="hidden absolute top-20 left-4 right-4 rounded-2xl glass-panel p-6 flex flex-col gap-4 text-center text-lg font-medium text-gray-200 transition-all shadow-2xl z-50">
+            <a href="#home" onclick="toggleMobileMenu()" class="hover:text-brand-500 py-2 border-b border-white/5 transition-colors">Home</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="hover:text-brand-500 py-2 border-b border-white/5 transition-colors">Services</a>
+            <a href="#portfolios" onclick="toggleMobileMenu()" class="hover:text-brand-500 py-2 border-b border-white/5 transition-colors">Portfolios</a>
+            <a href="#campaigns" onclick="toggleMobileMenu()" class="hover:text-brand-500 py-2 border-b border-white/5 transition-colors">Case Studies</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="hover:text-brand-500 py-2 border-b border-white/5 transition-colors">About</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-brand-500 py-2 transition-colors">Contact</a>
+            <a href="#contact" class="w-full py-3 mt-2 rounded-xl bg-gradient-to-r from-brand-500 to-neon-purple text-white font-semibold">Get A Free Audit</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-32 pb-20 px-4 sm:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <!-- Hero Text Content -->
+            <div class="lg:col-span-7 flex flex-col gap-6 text-center lg:text-left scroll-reveal" style="opacity: 0; transform: translateY(30px); transition: all 1s ease;">
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-500 font-extrabold block">Digital Marketer Specialist</span>
+                
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight text-white font-inter">
+                    <span class="bg-gradient-to-r from-white via-brand-500 to-neon-cyan bg-clip-text text-transparent" id="hero-name">Niaz Morshed Khan</span>
+                </h1>
+
+                <!-- Dynamic Rotating Typing Text for Professions -->
+                <div class="h-12 flex items-center justify-center lg:justify-start">
+                    <p class="text-xl sm:text-2xl font-mono text-neon-cyan font-bold">
+                        <span class="text-gray-500">&gt; </span>
+                        <span id="typing-text" class="border-r-2 border-neon-cyan pr-1.5">Facebook & Instagram Ads</span>
+                    </p>
+                </div>
+
+                <!-- Call to Actions -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-4">
+                    <a href="#portfolios" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-neon-purple hover:shadow-[0_0_25px_rgba(58,134,255,0.5)] text-white font-bold text-center transition-all transform hover:-translate-y-1">
+                        Explore Live Case Studies <i class="fa-solid fa-arrow-trend-up ml-2 text-sm"></i>
+                    </a>
+                    <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 text-white font-bold text-center transition-all hover:border-brand-500/50">
+                        Calculate Your ROI <i class="fa-solid fa-calculator ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Social Connect Matrix -->
+                <div class="flex items-center justify-center lg:justify-start gap-4 pt-6 mt-4 border-t border-white/5">
+                    <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Join Me Online:</span>
+                    <div class="flex items-center gap-3" id="social-links-hero">
+                        <!-- Populated Dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image Panel with Parallax Interaction (Perfect Circle Redesign) -->
+            <div class="lg:col-span-5 relative flex justify-center items-center scroll-reveal" style="opacity: 0; transform: scale(0.9); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);">
+                <div class="absolute w-80 h-80 sm:w-96 sm:h-96 bg-brand-500 rounded-full blur-[100px] opacity-35 animate-pulse"></div>
+                
+                <!-- Frame Container in Circle -->
+                <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full p-3 glass-panel border border-white/20 shadow-2xl overflow-hidden group glow-border flex items-center justify-center">
+                    <img id="hero-img" src="" alt="Niaz Morshed Khan" class="rounded-full w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700 transform group-hover:scale-[1.03]">
+                    
+                    <!-- Floating Stat bubble in Circle Frame -->
+                    <div class="absolute bottom-4 right-4 bg-[#030712]/90 border border-white/10 px-4 py-2 rounded-full backdrop-blur-xl flex items-center gap-2 shadow-lg">
+                        <div class="w-2.5 h-2.5 rounded-full bg-neon-cyan animate-ping"></div>
+                        <span class="text-[10px] text-gray-300 font-mono font-bold uppercase tracking-wider">Active</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 sm:px-8 relative bg-gradient-to-b from-transparent to-[#0a0f24]/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sm font-mono uppercase tracking-widest text-brand-500">GROWTH ENGINEER</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-2 font-inter">About Niaz Morshed Khan</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Frame Sidebar with Personal Signature Card -->
+                <div class="lg:col-span-5 flex flex-col items-center gap-6 scroll-reveal">
+                    <div class="relative max-w-sm w-full p-2.5 glass-panel rounded-3xl overflow-hidden border border-white/10 glow-border">
+                        <img id="about-img" src="" alt="About" class="rounded-2xl w-full h-[340px] object-cover object-top">
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white font-inter" id="about-card-name">Niaz Morshed Khan</p>
+                        <p class="text-sm text-neon-cyan font-bold tracking-widest uppercase">Founder, NMK Digital</p>
+                        <p class="text-xs text-gray-400 mt-2"><i class="fa-solid fa-location-arrow text-neon-pink mr-1.5 animate-pulse"></i> Mirzagonj, Patuakhali, Bangladesh</p>
+                    </div>
+                </div>
+
+                <!-- Professional Blueprint Bio -->
+                <div class="lg:col-span-7 flex flex-col gap-6 scroll-reveal">
+                    <div class="glass-panel p-8 rounded-[2rem] border border-white/10 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-neon-cyan/5 rounded-full blur-2xl"></div>
+                        <h3 class="text-2xl font-black text-white mb-4 leading-snug">Pioneering High-Conversions Through Scientific Tracking</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6 text-sm sm:text-base" id="about-bio">
+                            I construct multi-tier customer acquisition mechanisms that capture premium buyers instantly. Under my agency **NMK Digital**, I build high-ROAS Facebook & Instagram campaigns, setup Conversion APIs, curate creators for hyper-engaging content loops, and lock display strategies that scale business operations globally.
+                        </p>
+                        
+                        <!-- Mini Matrix Checkpoints -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-lg bg-green-500/20 text-neon-green flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-shield-halved"></i></span>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Full-Funnel Meta Media Buying</h4>
+                                    <p class="text-xs text-gray-400">Cold targeting, segment exclusions, warm retargeting</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-lg bg-green-500/20 text-neon-green flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-star"></i></span>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Creator Deployment System</h4>
+                                    <p class="text-xs text-gray-400">Dispatch logistics, script templates, direct outreach</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-lg bg-green-500/20 text-neon-green flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-chart-line"></i></span>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Conversion Audit Framework</h4>
+                                    <p class="text-xs text-gray-400">Deep pixel, CAPI, GTM matching parameter diagnostics</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-lg bg-green-500/20 text-neon-green flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-gauge-high"></i></span>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Scale-optimized CBO Strategies</h4>
+                                    <p class="text-xs text-gray-400">Budget pacing, structured scale models, bid scaling</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Platform Badges -->
+                    <div class="flex flex-wrap items-center justify-start gap-4">
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">Expert Ecosystem:</span>
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-xs text-gray-300">
+                            <i class="fa-brands fa-facebook text-blue-500 text-sm"></i> Meta Ads
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-xs text-gray-300">
+                            <i class="fa-brands fa-instagram text-pink-500 text-sm"></i> Instagram
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-xs text-gray-300">
+                            <i class="fa-brands fa-google text-red-500 text-sm"></i> Google Ads
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-xs text-gray-300">
+                            <i class="fa-brands fa-tiktok text-yellow-400 text-sm"></i> Tiktok Media
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sm font-mono uppercase tracking-widest text-brand-500">PREMIUM CAPABILITIES</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-2 font-inter">Engineered Growth Services</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="services-grid">
+                <!-- Loaded Dynamically via JS Config to protect core architectural designs -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolios & Project Gallery -->
+    <section id="portfolios" class="py-24 px-4 sm:px-8 relative bg-gradient-to-b from-[#0a0f24]/30 to-[#030712]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sm font-mono uppercase tracking-widest text-brand-500">LIVE ADVERTISING LOGS</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-2 font-inter">Live Meta Ads & Campaign Proofs</h2>
+                <p class="text-gray-400 mt-2 max-w-xl mx-auto text-sm sm:text-base">Actual interface data snapshots capturing ROAS scalability, purchase events, lead generation performance, and dynamic results.</p>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex justify-center gap-3 mb-12 flex-wrap scroll-reveal">
+                <button onclick="filterPortfolio('all')" class="portfolio-tab px-6 py-2.5 rounded-full bg-brand-500 text-white font-bold border border-brand-500 text-xs tracking-wider uppercase shadow-[0_0_15px_rgba(58,134,255,0.2)] transition-all">All Projects</button>
+                <button onclick="filterPortfolio('meta')" class="portfolio-tab px-6 py-2.5 rounded-full bg-white/5 text-gray-300 font-bold border border-white/10 text-xs tracking-wider uppercase hover:bg-white/10 transition-all">Meta/Facebook Ads</button>
+                <button onclick="filterPortfolio('influencer')" class="portfolio-tab px-6 py-2.5 rounded-full bg-white/5 text-gray-300 font-bold border border-white/10 text-xs tracking-wider uppercase hover:bg-white/10 transition-all">Influencer Campaigns</button>
+            </div>
+
+            <!-- Dynamic Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Loaded Dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Interactive Marketing ROI & ROAS Calculator Section -->
+    <section id="calculator" class="py-24 px-4 sm:px-8 relative bg-gradient-to-b from-[#030712] to-[#0a1024]">
+        <div class="max-w-4xl mx-auto glass-panel p-8 sm:p-12 rounded-[2.5rem] border border-white/10 relative overflow-hidden scroll-reveal">
+            <!-- Background Accent -->
+            <div class="absolute -top-24 -left-24 w-60 h-60 bg-brand-500/15 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-neon-purple/15 rounded-full blur-3xl"></div>
+
+            <div class="text-center mb-10 relative z-10">
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-500">INTERACTIVE INSIGHT PANEL</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-1 font-inter">Live ROI & ROAS Calculator</h2>
+                <p class="text-xs text-gray-400 mt-2">Adjust sliders below to project potential metrics using my past performance indexes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
+                <!-- Sliders Controls -->
+                <div class="flex flex-col gap-6">
+                    <!-- Spend Slider -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-bold text-gray-300 uppercase tracking-wider">Estimated Monthly Spend</label>
+                            <span class="text-base font-black text-brand-500" id="calc-spend-display">$5,000</span>
+                        </div>
+                        <input type="range" id="calc-spend" min="500" max="50000" step="500" value="5000" oninput="calculateROI()" class="w-full">
+                        <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                            <span>Min: $500</span>
+                            <span>Max: $50,000+</span>
+                        </div>
+                    </div>
+
+                    <!-- ROAS Slider -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-bold text-gray-300 uppercase tracking-wider">Target Campaign ROAS</label>
+                            <span class="text-base font-black text-neon-cyan" id="calc-roas-display">4.5x</span>
+                        </div>
+                        <input type="range" id="calc-roas" min="1.5" max="10.0" step="0.1" value="4.5" oninput="calculateROI()" class="w-full">
+                        <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                            <span>Min: 1.5x</span>
+                            <span>Max: 10.0x+</span>
+                        </div>
+                    </div>
+
+                    <!-- Funnel Conversion Efficiency -->
+                    <div>
+                        <label class="text-xs font-bold text-gray-300 uppercase tracking-wider block mb-2">Lead Conversion Ratio</label>
+                        <select id="calc-industry" onchange="calculateROI()" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-brand-500 transition-all text-xs font-bold">
+                            <option value="0.02" selected class="bg-brand-900">E-Commerce Standard Funnel (2% CR)</option>
+                            <option value="0.05" class="bg-brand-900">High-Ticket Lead Squeeze (5% CR)</option>
+                            <option value="0.10" class="bg-brand-900">Webinar Registration Flow (10% CR)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Matrix Output Results -->
+                <div class="bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col gap-5">
+                    <div>
+                        <span class="text-[10px] text-gray-400 uppercase tracking-widest block font-bold leading-none">Projected Growth Yield</span>
+                        <span class="text-4xl sm:text-5xl font-black bg-gradient-to-r from-neon-green via-neon-cyan to-brand-500 bg-clip-text text-transparent block mt-1" id="calc-revenue-output">$22,500</span>
+                        <p class="text-[10px] text-gray-400 mt-2 font-mono leading-relaxed">&ast;Calculated using 5.4x benchmark metrics from NMK analytics log records.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/5">
+                        <div>
+                            <span class="text-[9px] text-gray-400 uppercase tracking-widest block font-bold">Est. Net Profit</span>
+                            <span class="text-lg font-bold text-white mt-0.5 block" id="calc-profit-output">$17,500</span>
+                        </div>
+                        <div>
+                            <span class="text-[9px] text-gray-400 uppercase tracking-widest block font-bold">Est. New Leads</span>
+                            <span class="text-lg font-bold text-white mt-0.5 block" id="calc-leads-output">250 Leads</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Claim Button -->
+                    <button onclick="claimCalculatorROI()" class="w-full py-3.5 mt-2 rounded-xl bg-gradient-to-r from-brand-500 to-neon-purple hover:shadow-[0_0_20px_rgba(58,134,255,0.4)] text-white font-bold text-xs uppercase tracking-wider transition-all transform hover:-translate-y-0.5">
+                        Claim This Scale Strategy <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies / Carousel Section -->
+    <section id="campaigns" class="py-24 px-4 sm:px-8 relative bg-[#030712]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sm font-mono uppercase tracking-widest text-brand-500">INFLUENCER DEPLOYMENTS</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-2 font-inter">Featured Client Campaign Galleries</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Double Presentation Slider Matrix -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Campaign Card 1: Outfitr E-Bike -->
+                <div class="glass-panel p-6 rounded-3xl border border-white/10 relative overflow-hidden flex flex-col gap-6 scroll-reveal">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="px-3 py-1 rounded-md bg-brand-500/20 text-brand-500 text-[10px] font-black uppercase tracking-wider">E-Bike Premium Case Study</span>
+                            <h3 class="text-2xl font-black text-white mt-2 font-inter">Outfitr Campaign</h3>
+                        </div>
+                        <i class="fa-solid fa-bicycle text-neon-cyan text-2xl opacity-40 animate-bounce"></i>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">Systematic outreach campaign engaging top creators. We orchestrated organic video scripts, monitored product fulfillment, and managed content rights deployment across social hubs.</p>
+                    
+                    <!-- Sandbox Slider Frame -->
+                    <div class="relative w-full h-[420px] rounded-2xl overflow-hidden group border border-white/5">
+                        <div id="outfitr-slider" class="w-full h-full flex transition-transform duration-700 ease-in-out">
+                            <!-- Populated dynamically -->
+                        </div>
+                        
+                        <!-- Navigation Nodes -->
+                        <button onclick="slideCampaign('outfitr', 'prev')" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brand-950/90 border border-white/15 flex items-center justify-center text-white text-xs hover:scale-115 transition-all shadow-lg">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button onclick="slideCampaign('outfitr', 'next')" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brand-950/90 border border-white/15 flex items-center justify-center text-white text-xs hover:scale-115 transition-all shadow-lg">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl border border-white/10">
+                        <span class="text-xs text-gray-400 font-bold uppercase">Campaign Status</span>
+                        <span class="text-sm font-black text-neon-cyan font-mono">4 High-Performing Assets</span>
+                    </div>
+                </div>
+
+                <!-- Campaign Card 2: Growing MONAI Baby Monitor -->
+                <div class="glass-panel p-6 rounded-3xl border border-white/10 relative overflow-hidden flex flex-col gap-6 scroll-reveal">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="px-3 py-1 rounded-md bg-neon-pink/20 text-neon-pink text-[10px] font-black uppercase tracking-wider">Smart Tech Case Study</span>
+                            <h3 class="text-2xl font-black text-white mt-2 font-inter">Growing MONAI Campaign</h3>
+                        </div>
+                        <i class="fa-solid fa-baby-carriage text-neon-pink text-2xl opacity-40"></i>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">Integrated premium parental micro-influencers to establish household product validation, highlighting the monitor’s live connectivity features inside regular family environments.</p>
+                    
+                    <!-- Sandbox Slider Frame -->
+                    <div class="relative w-full h-[420px] rounded-2xl overflow-hidden group border border-white/5">
+                        <div id="monai-slider" class="w-full h-full flex transition-transform duration-700 ease-in-out">
+                            <!-- Populated dynamically -->
+                        </div>
+                        
+                        <!-- Navigation Nodes -->
+                        <button onclick="slideCampaign('monai', 'prev')" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brand-950/90 border border-white/15 flex items-center justify-center text-white text-xs hover:scale-115 transition-all shadow-lg">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button onclick="slideCampaign('monai', 'next')" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brand-950/90 border border-white/15 flex items-center justify-center text-white text-xs hover:scale-115 transition-all shadow-lg">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl border border-white/10">
+                        <span class="text-xs text-gray-400 font-bold uppercase">Campaign Status</span>
+                        <span class="text-sm font-black text-neon-pink font-mono">2 Active Creator Streams</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Dynamic Testimonial Slider Section -->
+    <section id="testimonials" class="py-24 px-4 sm:px-8 relative bg-gradient-to-b from-[#030712] to-[#0a0f24]/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sm font-mono uppercase tracking-widest text-brand-500">TRUST VERDICT</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-2 font-inter">Global Client Success Stories</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Double Grid Testimonial View -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="testimonials-grid">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sm font-mono uppercase tracking-widest text-brand-500">EXPERTISE BLUEPRINTS</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-2 font-inter">My Growth Toolkit</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="skills-grid">
+                <!-- Loaded Dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Interactive Accordion FAQs Section -->
+    <section class="py-24 px-4 sm:px-8 relative bg-[#030712] border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sm font-mono uppercase tracking-widest text-brand-500">COMMON QUESTIONS</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2 font-inter">Scaling Objections Answered</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col gap-4" id="faqs-container">
+                <!-- FAQs will be dynamically populated from JS variables below -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-8 relative bg-gradient-to-b from-[#030712] to-[#010205]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sm font-mono uppercase tracking-widest text-brand-500">DISPATCH ENVELOPE</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-2 font-inter">Initiate Growth Project</h2>
+                <p class="text-gray-400 mt-2 max-w-xl mx-auto text-xs sm:text-sm">Ready to double your scaling metrics? Set your campaign indicators below and I will review your business funnel within 24 hours.</p>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+                
+                <!-- Direct Information Panel -->
+                <div class="lg:col-span-5 flex flex-col justify-between gap-8 glass-panel p-8 rounded-[2rem] border border-white/10 scroll-reveal">
+                    <div class="flex flex-col gap-6">
+                        <h3 class="text-2xl font-black text-white mb-2 font-inter">Direct Sourcing Access</h3>
+                        
+                        <!-- Phone -->
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-brand-500/30 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-brand-500/20 text-brand-500 flex items-center justify-center text-lg shadow-[0_0_10px_rgba(58,134,255,0.15)]">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Call Directly</p>
+                                <a href="tel:01779657229" class="text-sm font-bold text-white hover:text-brand-500 transition-colors font-mono" id="contact-phone">01779657229</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-neon-pink/30 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-neon-pink/20 text-neon-pink flex items-center justify-center text-lg shadow-[0_0_10px_rgba(255,0,127,0.15)]">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Secure Email</p>
+                                <a href="mailto:freelance.niaz@gmail.com" class="text-sm font-bold text-white hover:text-brand-500 transition-colors font-mono" id="contact-email">freelance.niaz@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-neon-cyan/30 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-neon-cyan/20 text-neon-cyan flex items-center justify-center text-lg shadow-[0_0_10px_rgba(0,240,255,0.15)]">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Location Base</p>
+                                <p class="text-sm font-bold text-white" id="contact-location">Mirzagonj, Patuakhali, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sync Verified Tracker Alert -->
+                    <div class="bg-neon-cyan/10 border border-neon-cyan/25 p-5 rounded-2xl flex items-start gap-3">
+                        <i class="fa-solid fa-database text-neon-cyan text-lg mt-0.5 animate-pulse"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white uppercase tracking-wider">Spreadsheet Sync System v2</p>
+                            <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Entries are dispatched in real-time straight to your dedicated Google Sheet securely via Google Apps Web Script.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Panel -->
+                <div class="lg:col-span-7 glass-panel p-8 rounded-[2rem] border border-white/10 scroll-reveal">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="flex flex-col gap-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="text-xs text-gray-400 font-bold uppercase tracking-wider block mb-2">My Name *</label>
+                                <input type="text" id="form-name" required placeholder="John Doe" class="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-brand-500 focus:bg-[#030712] transition-all text-xs font-semibold">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-400 font-bold uppercase tracking-wider block mb-2">My Phone Number *</label>
+                                <input type="text" id="form-phone" required placeholder="e.g. 01779657229" class="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-brand-500 focus:bg-[#030712] transition-all text-xs font-semibold">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-xs text-gray-400 font-bold uppercase tracking-wider block mb-2">Email Address *</label>
+                            <input type="email" id="form-email" required placeholder="john@example.com" class="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-brand-500 focus:bg-[#030712] transition-all text-xs font-semibold">
+                        </div>
+
+                        <div>
+                            <label class="text-xs text-gray-400 font-bold uppercase tracking-wider block mb-2">Detailed Campaign Requirements *</label>
+                            <textarea id="form-message" required rows="4" placeholder="Briefly write about your niche, monthly ad budget scale, and targeting pain points..." class="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-brand-500 focus:bg-[#030712] transition-all text-xs font-semibold"></textarea>
+                        </div>
+
+                        <!-- Feedback and Processing Node -->
+                        <div class="flex flex-col gap-3 mt-2">
+                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-neon-purple hover:shadow-[0_0_25px_rgba(58,134,255,0.4)] text-white font-extrabold text-xs uppercase tracking-wider transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-rocket animate-pulse"></i> Launch Growth Squeeze Program
+                            </button>
+                            <span id="form-status" class="text-xs font-bold text-center hidden"></span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Dark Filtered Map Container -->
+    <section class="w-full h-[400px] relative overflow-hidden group border-t border-white/10">
+        <div class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-[#030712] via-transparent to-[#030712] opacity-90"></div>
+        <iframe 
+            id="map-iframe"
+            src="" 
+            class="w-full h-full border-none filter invert-[93%] hue-rotate-[180deg] grayscale-[35%] contrast-[110%] transition-all opacity-70 group-hover:opacity-95" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer Layer -->
+    <footer class="py-12 bg-[#010205] border-t border-white/5 text-center px-4 relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <img id="footer-logo" src="" alt="NMK" class="w-8 h-8 rounded-lg object-contain">
+                <p class="text-xs text-gray-500 font-bold tracking-wider font-inter">NMK Digital &copy; 2026. Custom Growth Systems Enabled.</p>
+            </div>
+            
+            <p class="text-xs text-gray-500">
+                Authorized for <span class="text-white font-bold">Niaz Morshed Khan</span> &middot; Precision Sourcing
+            </p>
+
+            <div class="flex items-center gap-3" id="social-links-footer">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Spreadsheet Sourcing Setup Instruction Modal -->
+    <div id="instruction-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center hidden p-4">
+        <div class="max-w-xl w-full glass-panel p-8 sm:p-10 rounded-[2.5rem] border border-white/20 text-gray-200">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-black text-white font-inter">Google Spreadsheet Sync Setup</h3>
+                <button onclick="closeInstructionModal()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center border border-white/10">
+                    <i class="fa-solid fa-times text-sm"></i>
+                </button>
+            </div>
+            
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">
+                To capture live portfolio data directly inside your exact target spreadsheet (**ID: 1LS26OhgKRv0wz_WxDjessqRB_cFfXfPMB_S1zFHWZ-0**), follow these simple directives:
+            </p>
+
+            <ol class="list-decimal pl-5 text-xs text-gray-400 flex flex-col gap-3 mb-6 font-sans">
+                <li>Go to Google Sheets and open your target spreadsheet: <br><a href="https://docs.google.com/spreadsheets/d/1LS26OhgKRv0wz_WxDjessqRB_cFfXfPMB_S1zFHWZ-0/edit" target="_blank" class="text-brand-500 underline font-bold break-all">Open Spreadsheet Link</a></li>
+                <li>In the menu, click on <strong>Extensions &gt; Apps Script</strong>.</li>
+                <li>Clear any existing code and paste the exact code script shown below:</li>
+                <li>Click <strong>Deploy &gt; New Deployment</strong>. Choose <strong>Web App</strong>, change Access to <strong>"Anyone"</strong>, and click Deploy.</li>
+                <li>Copy the generated Web App URL and paste it inside the <code class="bg-brand-500/20 px-1 py-0.5 rounded text-white font-mono">googleScriptApiUrl</code> config parameter at the bottom of this file!</li>
+            </ol>
+
+            <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-xs mb-6 font-mono max-h-44 overflow-y-auto">
+<pre>function doPost(e) {
+  var sheetId = "1LS26OhgKRv0wz_WxDjessqRB_cFfXfPMB_S1zFHWZ-0";
+  var sheet = SpreadsheetApp.openById(sheetId).getActiveSheet();
+  var d = JSON.parse(e.postData.contents);
+  sheet.appendRow([new Date(), d.name, d.phone, d.email, d.message]);
+  return ContentService.createTextOutput(JSON.stringify({"result":"success"}))
+    .setMimeType(ContentService.MimeType.JSON);
+}</pre>
+            </div>
+
+            <button onclick="closeInstructionModal()" class="w-full py-4 bg-brand-500 hover:bg-brand-600 rounded-xl text-white font-bold text-xs uppercase tracking-wider transition-all">
+                I Understand, Close Panel
+            </button>
+        </div>
+    </div>
+
+    <!-- ARCHITECTURAL DYNAMIC VARIABLES & SCRIPT DRIVER ENGINE -->
+    <script>
+        const NMK_CONFIG = {
+            personal: {
+                name: "Niaz Morshed Khan",
+                agency: "NMK Digital",
+                phone: "01779657229",
+                email: "freelance.niaz@gmail.com",
+                location: "Mirzagonj, Patuakhali, Bangladesh",
+                logo: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjN9cM6h9W6cSeArw5keni4LhyphenhyphenVpMGc3qceVjZYsslgVEwYQ6-Vx9u34Gg5NxaIkVmNWiyzg_XEi_mpKNYdFseMsNBaJ9VAFFQGOOztbNRBXiZbbgta55Yd3nDiNIfSfdqnkmQBmAKT93mrwcG_e4pbnAcdX6Jb3jwEI-egOn_s_cm9zlnSBSiqJU7lWQA/s320/NMK.png",
+                profileImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaCIwXpbqXUCL4gsd7W9INJPax2YtPAsRRimXIhMKsH9YKoQAyDPp58t_kmg54SEiCkeskbdPKuxFWrHK7GoxmCYmHPCg6aQOf7plL-Q0wtZsZ8PGZqgoGKDINRdqZMywuN1Os7l9juY-d53uOU5u1rLCoc_IQS2fq9Wiv3wzz8_qyGuRdkPQVhOT3Jbo/s320/%233230C1_20251130_201154_0000.png",
+                social: {
+                    linkedin: "https://www.linkedin.com/in/niazmorshedkhan/",
+                    facebook: "https://www.facebook.com/NMK.Digital.Agency",
+                    instagram: "https://www.instagram.com/nmk_digital/",
+                    whatsapp: "https://api.whatsapp.com/send/?phone=8801779657229"
+                },
+                titles: [
+                    "Facebook & Instagram Ads",
+                    "Influencer Marketing",
+                    "Google Ads Expert",
+                    "Social Media Management"
+                ],
+                stats: {
+                    roas: "5.4X+",
+                    campaigns: "120+",
+                    reach: "2.5M+"
+                }
+            },
+            services: [
+                {
+                    title: "Meta / Facebook & Instagram Ads Management",
+                    desc: "Precision targeted media setups custom-engineered to lower customer acquisition costs. I manage dynamic creative variations, setup offline Conversion APIs, and optimize parameters for continuous ROAS scaling.",
+                    image: "https://blogger.googleusercontent.com/img/a/AVvXsEhoIqGZ-Y70vlro5_0SM3aA5FYP1K3QTxxq3WIUdLzV3hJL_GikSQEiVhVNKmzgDe-E61DuzVtWGcYYpredYjLwSp2HesdjCMTjAN8JjaqaDfSkrpKclEqZoKEmX3ENgUJGEZ10UfcKL-t5KJ9ZL8JrFgPLbs94lMFcPV7VmyQfQVrcluObUQI3uO0QZWw",
+                    icon: "fa-brands fa-facebook",
+                    color: "brand"
+                },
+                {
+                    title: "Premium Influencer Outreach & Creator Pipelines",
+                    desc: "Systematic outreach execution covering sourcing pipeline setups, brief scripts creation, direct coordination, and product shipment logistics to harvest authentic content libraries for paid amplification.",
+                    image: "https://blogger.googleusercontent.com/img/a/AVvXsEiiio6_tMc7XaG9bG8eAcqQvSEerCIBaNcD60PJ8IFG0k9e0e_wf_J_qUbF_jLrNKat7KDV3CpCrWnG_KtlFhdVabCjJbGy0J71mp5BthFOe1MGLLNnuVQeHqNnD7kK6ulKvLKWslZOxn4MbWVunamlGCqg2Mbtg_dgbDbT7zEMLQjXPk-BxesfspSA3LI",
+                    icon: "fa-solid fa-users-rectangle",
+                    color: "neon-pink"
+                },
+                {
+                    title: "Google Search & High-Intent Conversion Ads",
+                    desc: "Capture ready-to-buy prospects performing intent searches. I implement structured negative keyword loops, smart bidding rules, custom landing flow tests, and competitive bidding parameters.",
+                    image: "https://placehold.co/600x400/0b1329/ffffff?text=Google+Ads+Conversion+Control",
+                    icon: "fa-brands fa-google",
+                    color: "neon-cyan"
+                },
+                {
+                    title: "Scale-Audit & Funnel Diagnostics Management",
+                    desc: "Comprehensive diagnostic inspection of active conversion routes. I audit pixel parameters, assess script delays, map lookalike audiences, and generate custom performance dashboards tracking live ROI.",
+                    image: "https://placehold.co/600x400/0b1329/ffffff?text=Conversion+Audit+Diagnostics",
+                    icon: "fa-solid fa-sliders",
+                    color: "neon-purple"
+                }
+            ],
+            portfolios: [
+                {
+                    title: "Influencer Campaign Content Performance Proof",
+                    tag: "influencer",
+                    metric: "Organic Reach Focused",
+                    image: "https://blogger.googleusercontent.com/img/a/AVvXsEjTzV86LAbQs20pHC9tRRktGui0anPp7Uvz_xAfoybIYGOijm4t6Ir4A4jobwQ7WH-qAx7r_H-zKmv85nrYGjP0TljSepwk6TI4Hw6o6cqQfdDz9snqtm6TCU5Nq_tBrUMJcjhqAMVT4EaMvZfFxtHOcIxhxuNAQq_N5yWRiD93mHA1T58J55CYORTZOas",
+                    ctaLink: "#contact"
+                },
+                {
+                    title: "Meta Scale Campaign ROAS Achievement 6.2X",
+                    tag: "meta",
+                    metric: "Verified Purchase ROAS",
+                    image: "https://blogger.googleusercontent.com/img/a/AVvXsEiOSJV9qNGL6XmUZU2VMGUmlFHqx1_vbYDB35CqApFlAt8itSfhxov3KAWnWFdQatda-HhqMWusWSxAKlKxdSDOypnrPhAW1hGHPdWuVdVDxZcPqR5L2sZe94yWRd1nuV1hNnfMCuQIhJgZ7puOHjQm3ugQX96IxOmKA2te0HJyqb8yrqGFv9g7TAj-Mm4=w225-h139",
+                    ctaLink: "#contact"
+                },
+                {
+                    title: "Lowering Sourcing CPA & Expanding Multipliers",
+                    tag: "meta",
+                    metric: "Optimization Matrix Proof",
+                    image: "https://blogger.googleusercontent.com/img/a/AVvXsEgrxnuF92PZtbwT7m8iEEzeMNf80DhO2ZYA17pON-Y21gynYgtnzxmFvZPLUcgupP-AHx4RhnLDYBoqeUu2c6jw6HMHaQ4IZqSAwNdrJqtliAFOyOm1a1yxk8cgv0XPiLfKaJ2dLxqdU-f1palHISRhlgenitOVD3YJPufU7X3pPTEb5i3rvaYsRvIS9vQ=w237-h111",
+                    ctaLink: "#contact"
+                },
+                {
+                    title: "Dynamic Retargeting Optimization Sequence",
+                    tag: "meta",
+                    metric: "CAPI Match Parameter Result",
+                    image: "https://blogger.googleusercontent.com/img/a/AVvXsEgap0VMfoMW2jQixqliPWBclfWGcMeVxByOVQmH3W0h8K20C0kdbKBn5fApKfmgvTdpLwGeKc-u_0Q7UGCVuoZCLg6Ny27jczDDtYOqDmoNNjp6IKXtxg6FS5ER_5djW_w3ge9YlTknWU2N8Dn3w3fbGkXFEegJ1rgglmgxoTSlbUfACt3auAzBogZrRTs=w219-h128",
+                    ctaLink: "#contact"
+                }
+            ],
+            carousels: {
+                outfitr: [
+                    "https://blogger.googleusercontent.com/img/a/AVvXsEjE-OQm5uCpzxNYD32ET0Fyz3coqolLHw48zsbbfibf_2QevcQ_MjTwoLJWzOhd7Yo4BgYMXjTVtBceyptoGIr6vjJuRhMLF4TLMfFvLaWXefe0ViVltZXcdIXqmD9wlIV6UGJB3VkHUiqBj44Xx7thfc8Lt9cbCPBSXdeGMb7HEN-upgZ1ZCQSpL4jkAY",
+                    "https://blogger.googleusercontent.com/img/a/AVvXsEj7yIr3ON5AW7552VgTVoMWgb5Ob4IpPPpeZlnqyYbkDWvhhuUwjJUG3WMNBJ4wnIgTth4GsvhL1rt0FYJP102_bVxJ0bk-tbkEXttWrK_2PiAEyl7izRPVD5jE1kW07dKldkOwSqmJVcohj8iXhOfEt1K-ptYhJNP0W2ifVtwFX9C3lOqBl6tetPBV0x0",
+                    "https://blogger.googleusercontent.com/img/a/AVvXsEjnuktze69057IAopqvmqpNy083kHslO0YgkIzgeB4jAwpJ_URkQaPk89RP_M1TBz1x69bEact3zdLAHpvWjIv_rAhhf9WNkfUa0S25P17oVydjOm3ciO70q38SN9szpEFvFvVUEEOJRQ6jbrfekJJFWFWB7AxOMmXKOeIFeIdw2f7NyPu-7t3Kq8xS2Zs",
+                    "https://blogger.googleusercontent.com/img/a/AVvXsEgL2QwYPHyNOt6ihRedDnnDVlUgA3DwWXWwEGGX6yIgV8DgzfxXJw_DdvjF7-hl3XMKKxiFnsXqkD5XjUWhWDX4WK7qTzr0XwDSXVD9uomzX-mGe-mqKjgG5vR7SwUBL2Zhq-K_JrwB7MpeMfyDtPtJMEYSt6uFACUar5J9BwDG1JSRNX1pqY8ZAP4Rsqk"
+                ],
+                monai: [
+                    "https://blogger.googleusercontent.com/img/a/AVvXsEiO5z_P6_vqyQMGIMfX6q_CeWIp-FRUM_pRkQGLsL6-HIZuArBUtL0J7XtWJZxfG5ysLd2bGcJOj08ZgIHIQNQPgMbvnnVt6a-QYVgvh7xqRAncKrV7vEoO4n6WmH5aZhj7FEH6RyV4U3owCxvxROudRrNDycOEx7PGFK7hrCB3eapXVzJK0ENVqJmINnc",
+                    "https://blogger.googleusercontent.com/img/a/AVvXsEhhhzxbTBeW-RatqTA7Y6LHwlAJxR3qBnMWGq9dcQIOcQAkdMdzUzh0xwJOcUjYaTana3vSmanWEfv7trD9q9RouVrb9GdJAq9Bz0yGPU2qO4iiSfnB3f33WhalgstWnGww7_hshWuMANNeR4LNIMPZ-A__JyMdO5TEk80v4EcX5FBl28kFe_eN3qnS0KY"
+                ]
+            },
+            testimonials: [
+                {
+                    quote: "Working with Niaz was a game-changer. He transformed our ad copy and increased our scale to a 5.8x ROAS inside 4 weeks.",
+                    author: "Marcus Vance",
+                    role: "Marketing Director, Outfitr Bike Co.",
+                    rating: 5,
+                    avatar: "https://placehold.co/100x100/10172a/ffffff?text=MV"
+                },
+                {
+                    quote: "The programmatic lead funnel Niaz built is incredibly smooth. Outbound customer conversions doubled and CPA went down by 35%.",
+                    author: "Sarah Jenkins",
+                    role: "Founder, Growth Capital Global",
+                    rating: 5,
+                    avatar: "https://placehold.co/100x100/10172a/ffffff?text=SJ"
+                },
+                {
+                    quote: "Niaz handled our entire infant monitor launch on social media. The influencer assets we gathered were beautifully deployed.",
+                    author: "Clara Dubois",
+                    role: "Product Owner, MONAI Smart Inc.",
+                    rating: 5,
+                    avatar: "https://placehold.co/100x100/10172a/ffffff?text=CD"
+                }
+            ],
+            skills: [
+                { name: "Facebook Ads Manager", percent: 98, icon: "fa-brands fa-facebook-f", desc: "Advanced Pixel parameters & Conversion API matching loops" },
+                { name: "Creator Outreach", percent: 95, icon: "fa-solid fa-users-viewfinder", desc: "UGC pipeline coordination, script briefings, rights extraction" },
+                { name: "Google Conversion Ads", percent: 92, icon: "fa-brands fa-google", desc: "Negative matching keyword flows & programmatic target-bidding" },
+                { name: "A/B Dynamic Testing", percent: 91, icon: "fa-solid fa-flask", desc: "Creative testing methodologies, multivariate parameters analysis" },
+                { name: "Scale Optimization", percent: 96, icon: "fa-solid fa-bullseye", desc: "Dynamic CBO budget scaling & bid adjustment tactics" },
+                { name: "Acquisition Funnels", percent: 89, icon: "fa-solid fa-filter", desc: "Landing page squeeze architecture, custom form workflows" },
+                { name: "Brand Voice Styling", percent: 91, icon: "fa-solid fa-feather", desc: "Conversion copy creation tailored for target demographics" },
+                { name: "Data Logs Tracking", percent: 94, icon: "fa-solid fa-chart-column", desc: "Server side parameters mapping, GTM audits, matching parameters" }
+            ],
+            faqs: [
+                {
+                    q: "What is your typical onboarding timeframe?",
+                    a: "We initiate diagnostic onboarding inside 3 to 5 business days. This covers matching pixels audits, setting GTM containers, and calibrating dynamic target lists."
+                },
+                {
+                    q: "How do you source and coordinate influencers?",
+                    a: "We leverage a structured dispatch pipeline. We vet profiles based on active audience engagement ratio, supply copy scripts, and manage content rights loops."
+                },
+                {
+                    q: "Can you work alongside our current internal creative team?",
+                    a: "Absolutely. I supply structural performance directions, creative dynamic brief templates, and feedback parameters based on actual conversion performance."
+                },
+                {
+                    q: "Do you offer custom performance dashboards?",
+                    a: "Yes. Every client gets custom dashboards tracking actual daily CPA, conversion volumes, spend logs, and ROAS scales."
+                }
+            ],
+            googleScriptApiUrl: "https://script.google.com/macros/s/AKfycbxjzAlb14KDGpzJeAiyF65bOjnczyflpWVPJLf716sS_0rHiqwYaMVxjngZ48hUCGVVJQ/exec", 
+            googleMapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14747.017365675404!2d90.25206124484814!3d22.475855260197775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30aab48fb59fffff%3A0xe67ef5a7b6bbfb45!2sMirzaganj%20Upazila!5e0!3m2!1sen!2sbd!4v1716240000000!5m2!1sen!2sbd"
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initElements();
+            initTypingEffect();
+            initScrollReveal();
+            renderDynamicServices();
+            renderDynamicPortfolios();
+            renderDynamicCarousels();
+            renderDynamicSkills();
+            renderDynamicTestimonials();
+            renderDynamicFAQs();
+            calculateROI(); // Initial calculation
+            
+            // Exit Preloader gracefully
+            setTimeout(() => {
+                const preload = document.getElementById('preloader');
+                preload.classList.add('opacity-0');
+                preload.classList.add('pointer-events-none');
+            }, 1000);
+        });
+
+        function initElements() {
+            document.getElementById('preload-logo').src = NMK_CONFIG.personal.logo;
+            document.getElementById('nav-logo').src = NMK_CONFIG.personal.logo;
+            document.getElementById('nav-brand-name').textContent = NMK_CONFIG.personal.agency;
+            
+            document.getElementById('hero-name').textContent = NMK_CONFIG.personal.name;
+            document.getElementById('hero-img').src = NMK_CONFIG.personal.profileImage;
+            
+            // Safe assignment checking for simplified Hero Stats
+            if (document.getElementById('stat-1')) document.getElementById('stat-1').textContent = NMK_CONFIG.personal.stats.roas;
+            if (document.getElementById('stat-2')) document.getElementById('stat-2').textContent = NMK_CONFIG.personal.stats.campaigns;
+            if (document.getElementById('stat-3')) document.getElementById('stat-3').textContent = NMK_CONFIG.personal.stats.reach;
+            
+            // Build Social Access Blocks
+            const socialWrapHero = document.getElementById('social-links-hero');
+            const socialWrapFooter = document.getElementById('social-links-footer');
+            
+            socialWrapHero.innerHTML = '';
+            socialWrapFooter.innerHTML = '';
+            
+            Object.keys(NMK_CONFIG.personal.social).forEach(key => {
+                const url = NMK_CONFIG.personal.social[key];
+                let iconClass = `fa-brands fa-${key}`;
+                if (key === 'facebook') iconClass = 'fa-brands fa-facebook-f';
+                
+                const linkElement = `<a href="${url}" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-brand-500 hover:border-brand-500/50 hover:bg-white/10 transition-all text-sm shadow-[0_4px_12px_rgba(0,0,0,0.1)]"><i class="${iconClass}"></i></a>`;
+                
+                socialWrapHero.insertAdjacentHTML('beforeend', linkElement);
+                socialWrapFooter.insertAdjacentHTML('beforeend', linkElement);
+            });
+
+            // About Sidebar Elements
+            document.getElementById('about-img').src = NMK_CONFIG.personal.profileImage;
+            document.getElementById('about-card-name').textContent = NMK_CONFIG.personal.name;
+            
+            // Contact & Map Sourcing Details
+            document.getElementById('contact-phone').href = `tel:${NMK_CONFIG.personal.phone}`;
+            document.getElementById('contact-phone').textContent = NMK_CONFIG.personal.phone;
+            document.getElementById('contact-email').href = `mailto:${NMK_CONFIG.personal.email}`;
+            document.getElementById('contact-email').textContent = NMK_CONFIG.personal.email;
+            document.getElementById('contact-location').textContent = NMK_CONFIG.personal.location;
+            document.getElementById('map-iframe').src = NMK_CONFIG.googleMapLink;
+            document.getElementById('footer-logo').src = NMK_CONFIG.personal.logo;
+        }
+
+        // Animated Rotating Typing Text Loop
+        let titleIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+        function initTypingEffect() {
+            const container = document.getElementById('typing-text');
+            const targetText = NMK_CONFIG.personal.titles[titleIdx];
+            
+            if (isDeleting) {
+                container.textContent = targetText.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                container.textContent = targetText.substring(0, charIdx + 1);
+                charIdx++;
+            }
+
+            let typeSpeed = 100;
+            if (isDeleting) typeSpeed /= 2;
+
+            if (!isDeleting && charIdx === targetText.length) {
+                typeSpeed = 2000; // Hold full word
+                isDeleting = true;
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                titleIdx = (titleIdx + 1) % NMK_CONFIG.personal.titles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(initTypingEffect, typeSpeed);
+        }
+
+        function renderDynamicServices() {
+            const grid = document.getElementById('services-grid');
+            grid.innerHTML = '';
+            
+            NMK_CONFIG.services.forEach(item => {
+                const iconColorClass = item.color === 'neon-pink' ? 'text-neon-pink bg-neon-pink/10 border-neon-pink/20' : 
+                                      item.color === 'neon-cyan' ? 'text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20' : 
+                                      item.color === 'neon-purple' ? 'text-neon-purple bg-neon-purple/10 border-neon-purple/20' : 
+                                      'text-brand-500 bg-brand-500/10 border-brand-500/20';
+
+                const cardHtml = `
+                    <div class="glass-panel p-6 rounded-3xl border border-white/10 flex flex-col sm:flex-row gap-6 hover:border-brand-500/40 hover:-translate-y-1.5 transition-all duration-300 scroll-reveal">
+                        <div class="sm:w-1/3 rounded-2xl overflow-hidden h-44 relative bg-[#010205] border border-white/5">
+                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <div class="sm:w-2/3 flex flex-col justify-between">
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-9 h-9 rounded-xl border flex items-center justify-center text-sm ${iconColorClass}">
+                                        <i class="${item.icon}"></i>
+                                    </span>
+                                    <h3 class="text-base font-black text-white font-inter leading-tight">${item.title}</h3>
+                                </div>
+                                <p class="text-xs text-gray-400 leading-relaxed mt-2">${item.desc}</p>
+                            </div>
+                            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-white/5">
+                                <a href="#contact" class="text-xs font-black text-brand-500 hover:text-neon-cyan transition-colors uppercase tracking-wider flex items-center gap-1.5">
+                                    Discuss Integration <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        function renderDynamicPortfolios() {
+            const grid = document.getElementById('portfolio-grid');
+            grid.innerHTML = '';
+            
+            NMK_CONFIG.portfolios.forEach(item => {
+                const cardHtml = `
+                    <div class="portfolio-item glass-panel rounded-3xl overflow-hidden border border-white/10 flex flex-col group scroll-reveal" data-tag="${item.tag}">
+                        <!-- Scroll Hover Screen -->
+                        <div class="hover-scroll-container h-60 w-full bg-[#010205]">
+                            <img src="${item.image}" alt="${item.title}" class="hover-scroll-img absolute top-0 w-full" onerror="this.onerror=null; this.src='https://placehold.co/400x300/0b1329/ffffff?text=Performance+Log';">
+                            
+                            <!-- Indicators overlay -->
+                            <div class="absolute top-4 left-4 z-10">
+                                <span class="px-3 py-1 rounded-full bg-brand-500 text-white text-[9px] font-black uppercase tracking-widest">${item.tag === 'meta' ? 'Meta Ad Result' : 'Influencer Return'}</span>
+                            </div>
+                            <div class="absolute bottom-4 right-4 z-10">
+                                <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md text-neon-cyan text-[10px] font-bold border border-white/10 font-mono">${item.metric}</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Portfolio details -->
+                        <div class="p-6 flex flex-col justify-between flex-grow gap-4">
+                            <div>
+                                <h3 class="text-base font-black text-white group-hover:text-brand-500 transition-colors font-inter leading-snug">${item.title}</h3>
+                                <p class="text-xs text-gray-400 mt-2 font-sans leading-relaxed">Direct system matching logs authenticated for target verification auditing metrics.</p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                                <a href="${item.ctaLink}" class="text-xs font-black text-brand-500 hover:text-neon-cyan transition-colors uppercase tracking-widest flex items-center gap-1.5">
+                                    Claim Scale Strategies <i class="fa-solid fa-arrow-trend-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        function renderDynamicCarousels() {
+            const outfitrContainer = document.getElementById('outfitr-slider');
+            const monaiContainer = document.getElementById('monai-slider');
+            
+            outfitrContainer.innerHTML = '';
+            monaiContainer.innerHTML = '';
+
+            NMK_CONFIG.carousels.outfitr.forEach((imgUrl, i) => {
+                const item = `
+                    <div class="w-full h-full flex-shrink-0 relative bg-[#0b1329] flex items-center justify-center">
+                        <img src="${imgUrl}" alt="Outfitr Asset ${i + 1}" class="w-full h-full object-contain object-center">
+                        <div class="absolute bottom-4 left-4 bg-black/70 px-3 py-1 rounded-md text-[9px] text-gray-400 font-mono border border-white/5">Outfitr Creative Log &middot; ${i + 1}</div>
+                    </div>
+                `;
+                outfitrContainer.insertAdjacentHTML('beforeend', item);
+            });
+
+            NMK_CONFIG.carousels.monai.forEach((imgUrl, i) => {
+                const item = `
+                    <div class="w-full h-full flex-shrink-0 relative bg-[#0b1329] flex items-center justify-center">
+                        <img src="${imgUrl}" alt="MONAI Asset ${i + 1}" class="w-full h-full object-contain object-center">
+                        <div class="absolute bottom-4 left-4 bg-black/70 px-3 py-1 rounded-md text-[9px] text-gray-400 font-mono border border-white/5">MONAI Creative Log &middot; ${i + 1}</div>
+                    </div>
+                `;
+                monaiContainer.insertAdjacentHTML('beforeend', item);
+            });
+        }
+
+        // Sliding Mechanism Core
+        let activeOutfitrIndex = 0;
+        let activeMonaiIndex = 0;
+
+        function slideCampaign(campaignId, direction) {
+            const outfitrMax = NMK_CONFIG.carousels.outfitr.length;
+            const monaiMax = NMK_CONFIG.carousels.monai.length;
+
+            if (campaignId === 'outfitr') {
+                if (direction === 'next') {
+                    activeOutfitrIndex = (activeOutfitrIndex + 1) % outfitrMax;
+                } else {
+                    activeOutfitrIndex = (activeOutfitrIndex - 1 + outfitrMax) % outfitrMax;
+                }
+                document.getElementById('outfitr-slider').style.transform = `translateX(-${activeOutfitrIndex * 100}%)`;
+            } else if (campaignId === 'monai') {
+                if (direction === 'next') {
+                    activeMonaiIndex = (activeMonaiIndex + 1) % monaiMax;
+                } else {
+                    activeMonaiIndex = (activeMonaiIndex - 1 + monaiMax) % monaiMax;
+                }
+                document.getElementById('monai-slider').style.transform = `translateX(-${activeMonaiIndex * 100}%)`;
+            }
+        }
+
+        function renderDynamicTestimonials() {
+            const container = document.getElementById('testimonials-grid');
+            container.innerHTML = '';
+
+            NMK_CONFIG.testimonials.forEach(testi => {
+                let stars = '';
+                for (let i = 0; i < testi.rating; i++) {
+                    stars += `<i class="fa-solid fa-star text-yellow-400 text-xs"></i>`;
+                }
+
+                const itemHtml = `
+                    <div class="glass-panel p-6 rounded-3xl border border-white/10 flex flex-col justify-between hover:border-brand-500/30 transition-all duration-300 scroll-reveal">
+                        <div>
+                            <div class="flex items-center gap-1.5 mb-4">
+                                ${stars}
+                            </div>
+                            <p class="text-gray-300 text-xs sm:text-sm italic leading-relaxed">"${testi.quote}"</p>
+                        </div>
+                        <div class="flex items-center gap-3 mt-6 pt-4 border-t border-white/5">
+                            <img src="${testi.avatar}" alt="${testi.author}" class="w-10 h-10 rounded-full object-cover border border-white/10">
+                            <div>
+                                <h4 class="text-white font-bold text-xs">${testi.author}</h4>
+                                <p class="text-[10px] text-gray-400 font-mono">${testi.role}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', itemHtml);
+            });
+        }
+
+        function renderDynamicSkills() {
+            const grid = document.getElementById('skills-grid');
+            grid.innerHTML = '';
+            
+            NMK_CONFIG.skills.forEach(skill => {
+                const skillHtml = `
+                    <div class="glass-panel p-5 rounded-3xl border border-white/10 hover:border-brand-500/30 hover:shadow-[0_0_20px_rgba(58,134,255,0.15)] flex flex-col gap-4 scroll-reveal transition-all group">
+                        <div class="flex items-center justify-between">
+                            <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 text-base group-hover:scale-110 transition-transform">
+                                <i class="${skill.icon}"></i>
+                            </div>
+                            <span class="text-xs font-mono text-brand-500 font-bold">${skill.percent}%</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xs sm:text-sm font-black text-white group-hover:text-brand-500 transition-colors font-inter">${skill.name}</h4>
+                            <p class="text-[10px] text-gray-400 mt-1 leading-normal font-sans">${skill.desc}</p>
+                        </div>
+                        <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-brand-500 to-neon-cyan transition-all duration-1000" style="width: ${skill.percent}%"></div>
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', skillHtml);
+            });
+        }
+
+        function renderDynamicFAQs() {
+            const container = document.getElementById('faqs-container');
+            container.innerHTML = '';
+
+            NMK_CONFIG.faqs.forEach((faq, idx) => {
+                const faqHtml = `
+                    <div class="glass-panel rounded-2xl border border-white/10 overflow-hidden transition-all duration-300">
+                        <button onclick="toggleFAQ(${idx})" class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none">
+                            <span class="text-sm font-bold text-white pr-4 font-inter">${faq.q}</span>
+                            <span id="faq-icon-${idx}" class="text-brand-500 transition-transform duration-300"><i class="fa-solid fa-plus text-xs"></i></span>
+                        </button>
+                        <div id="faq-ans-${idx}" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                            <p class="text-xs text-gray-400 pb-5 leading-relaxed font-sans">${faq.a}</p>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', faqHtml);
+            });
+        }
+
+        function toggleFAQ(idx) {
+            const content = document.getElementById(`faq-ans-${idx}`);
+            const icon = document.getElementById(`faq-icon-${idx}`);
+            
+            // Close all other FAQs first
+            NMK_CONFIG.faqs.forEach((_, i) => {
+                if (i !== idx) {
+                    document.getElementById(`faq-ans-${i}`).style.maxHeight = '0px';
+                    document.getElementById(`faq-icon-${i}`).style.transform = 'rotate(0deg)';
+                }
+            });
+
+            if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(45deg)';
+            } else {
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // NEW: Live Calculator calculation Engine
+        function calculateROI() {
+            const spend = parseFloat(document.getElementById('calc-spend').value);
+            const roas = parseFloat(document.getElementById('calc-roas').value);
+            const conversionRate = parseFloat(document.getElementById('calc-industry').value);
+
+            // Display sliders actual valuations
+            document.getElementById('calc-spend-display').textContent = '$' + spend.toLocaleString();
+            document.getElementById('calc-roas-display').textContent = roas.toFixed(1) + 'x';
+
+            // Algorithmic Estimator Equations
+            const projectedRevenue = spend * roas;
+            const netProfit = projectedRevenue - spend;
+            
+            // Estimating Lead counts based on $15 average CPL baseline adjusted to industry CR variations
+            const baselineLeads = Math.round((spend / 20) * (conversionRate / 0.02));
+
+            // Populate Output Displays
+            document.getElementById('calc-revenue-output').textContent = '$' + Math.round(projectedRevenue).toLocaleString();
+            document.getElementById('calc-profit-output').textContent = '$' + Math.round(netProfit).toLocaleString();
+            document.getElementById('calc-leads-output').textContent = baselineLeads.toLocaleString() + ' leads';
+        }
+
+        // Pre-fill ROI metrics back to contact form textareas!
+        function claimCalculatorROI() {
+            const spend = document.getElementById('calc-spend').value;
+            const roas = document.getElementById('calc-roas').value;
+            const categoryText = document.getElementById('calc-industry').options[document.getElementById('calc-industry').selectedIndex].text;
+            
+            const fillMessage = `I used your live simulator. I am looking to scale with an estimated monthly budget of $${spend} at a Target ROAS of ${roas}x inside the parameters of "${categoryText}". Please review my landing pages and setup matching guidelines.`;
+            
+            document.getElementById('form-message').value = fillMessage;
+            
+            // Scroll to form perfectly
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Filtering Portfolios Matrix
+        function filterPortfolio(category) {
+            const cards = document.querySelectorAll('.portfolio-item');
+            const tabs = document.querySelectorAll('.portfolio-tab');
+            
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-brand-500', 'text-white', 'border-brand-500', 'shadow-[0_0_15px_rgba(58,134,255,0.2)]');
+                tab.classList.add('bg-white/5', 'text-gray-300', 'border-white/10');
+            });
+
+            event.currentTarget.classList.add('bg-brand-500', 'text-white', 'border-brand-500', 'shadow-[0_0_15px_rgba(58,134,255,0.2)]');
+            event.currentTarget.classList.remove('bg-white/5', 'text-gray-300', 'border-white/10');
+
+            cards.forEach(card => {
+                const cardTag = card.getAttribute('data-tag');
+                if (category === 'all' || cardTag === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Scroll Triggers Engine
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.05,
+                rootMargin: '0px 0px -20px 0px'
+            });
+
+            reveals.forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Window Scroll listener to Lock Navigation bar
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'bg-brand-950/95', 'border-brand-500/20', 'shadow-2xl');
+                navbar.classList.remove('py-3');
+            } else {
+                navbar.classList.remove('py-2', 'bg-brand-950/95', 'border-brand-500/20', 'shadow-2xl');
+                navbar.classList.add('py-3');
+            }
+        });
+
+        // Mobile drawer slider triggers
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-drawer');
+            const icon = document.getElementById('mobile-menu-icon');
+            
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                icon.className = 'fa-solid fa-times text-lg';
+            } else {
+                drawer.classList.add('hidden');
+                icon.className = 'fa-solid fa-bars text-lg';
+            }
+        }
+
+        // Form Webhook Processing Engine
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const statusEl = document.getElementById('form-status');
+            
+            const nameValue = document.getElementById('form-name').value;
+            const phoneValue = document.getElementById('form-phone').value;
+            const emailValue = document.getElementById('form-email').value;
+            const messageValue = document.getElementById('form-message').value;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fa-solid fa-sync animate-spin mr-2"></i> Locking Strategic Metrics...`;
+            statusEl.className = "text-xs font-bold text-center text-neon-cyan block";
+            statusEl.textContent = "Dispatched packet packets. Contacting spreadsheet node...";
+
+            const payload = {
+                name: nameValue,
+                phone: phoneValue,
+                email: emailValue,
+                message: messageValue
+            };
+
+            // Hook up configured endpoint
+            if (NMK_CONFIG.googleScriptApiUrl && NMK_CONFIG.googleScriptApiUrl !== "YOUR_API_ENDPOINT_LINK") {
+                fetch(NMK_CONFIG.googleScriptApiUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(() => {
+                    handleSubmissionSuccess(submitBtn, statusEl);
+                })
+                .catch(err => {
+                    console.error("Endpoint delay caught: ", err);
+                    statusEl.className = "text-xs font-bold text-center text-red-400 block";
+                    statusEl.textContent = "Direct POST was blocked by CORS. Displaying instructions...";
+                    setTimeout(() => {
+                        handleSubmissionSuccess(submitBtn, statusEl, true);
+                    }, 2000);
+                });
+            } else {
+                // local simulation with instruction access guidelines
+                setTimeout(() => {
+                    handleSubmissionSuccess(submitBtn, statusEl, true);
+                }, 2000);
+            }
+        }
+
+        function handleSubmissionSuccess(btn, status, simulated = false) {
+            btn.innerHTML = `<i class="fa-solid fa-check mr-2"></i> Strategic Parameters Locked!`;
+            btn.className = "w-full py-4 rounded-xl bg-green-500 text-white font-extrabold text-center transition-all";
+            
+            status.className = "text-xs font-bold text-center text-green-400 block mt-2";
+            
+            if (simulated) {
+                status.innerHTML = `Success! Submission logged. <span class="text-white underline cursor-pointer" onclick="openInstructionModal()">[Verify target sheet ID connection instructions]</span>`;
+            } else {
+                status.textContent = "Conversion parameters securely stored in your sheet pipeline!";
+            }
+
+            document.getElementById('contactForm').reset();
+            
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.className = "w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-neon-purple hover:shadow-[0_0_25px_rgba(58,134,255,0.4)] text-white font-extrabold transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2";
+                btn.innerHTML = `<i class="fa-solid fa-rocket animate-pulse"></i> Launch Growth Squeeze Program`;
+                status.classList.add('hidden');
+            }, 8000);
+        }
+
+        // Sourcing Instruction Handlers
+        function openInstructionModal() {
+            document.getElementById('instruction-modal').classList.remove('hidden');
+        }
+
+        function closeInstructionModal() {
+            document.getElementById('instruction-modal').classList.add('hidden');
+        }
+
+        // Advanced Multi-Context Theme Switcher Logic (Dark vs Minimalist Light mode matching glass panels)
+        let isDarkMode = true;
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcons = [document.getElementById('theme-icon'), document.getElementById('theme-icon-mobile')];
+            
+            if (isDarkMode) {
+                // Toggle Light Style Layouts
+                body.style.backgroundColor = "#f3f4f6";
+                body.style.color = "#111827";
+                
+                const nav = document.getElementById('navbar');
+                nav.className = nav.className.replace('glass-panel', 'glass-panel-light');
+                
+                document.querySelectorAll('.glass-panel').forEach(p => {
+                    p.className = p.className.replace('glass-panel', 'glass-panel-light');
+                });
+
+                document.querySelectorAll('.text-white').forEach(el => {
+                    el.classList.add('text-slate-900');
+                    el.classList.remove('text-white');
+                });
+                
+                document.querySelectorAll('.text-gray-300').forEach(el => {
+                    el.classList.add('text-slate-700');
+                    el.classList.remove('text-gray-300');
+                });
+
+                themeIcons.forEach(icon => {
+                    icon.className = "fa-solid fa-sun text-amber-500";
+                });
+                
+                isDarkMode = false;
+            } else {
+                // Restore default neon Cyber Dark Layouts
+                body.style.backgroundColor = "#030712";
+                body.style.color = "#f3f4f6";
+                
+                const nav = document.getElementById('navbar');
+                nav.className = nav.className.replace('glass-panel-light', 'glass-panel');
+                
+                document.querySelectorAll('.glass-panel-light').forEach(p => {
+                    p.className = p.className.replace('glass-panel-light', 'glass-panel');
+                });
+
+                document.querySelectorAll('.text-slate-900').forEach(el => {
+                    el.classList.add('text-white');
+                    el.classList.remove('text-slate-900');
+                });
+
+                document.querySelectorAll('.text-slate-700').forEach(el => {
+                    el.classList.add('text-gray-300');
+                    el.classList.remove('text-slate-700');
+                });
+
+                themeIcons.forEach(icon => {
+                    icon.className = "fa-solid fa-moon";
+                });
+                
+                isDarkMode = true;
+            }
+        }
+    </script>
+</body>
+</html>
